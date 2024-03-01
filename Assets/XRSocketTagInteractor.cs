@@ -10,7 +10,6 @@ public class XRSocketTagInteractor : XRSocketInteractor
     private bool isObjectSelected = false;
     public float moveSpeed = 0.5f;
     public float moveDistance = 0.2f;
-    private Vector3 initialObjectPosition;
 
     public float floatSpeed = 0.5f;    // Velocidade de flutuação
     public float floatHeight = 0.1f;   // Altura máxima da flutuação
@@ -18,14 +17,10 @@ public class XRSocketTagInteractor : XRSocketInteractor
 
     private float initialYPosition;
 
-    private bool isCorrect = false;
-
     void Start()
     {
         // Salva a posição inicial do objeto
-        initialObjectPosition = transform.position;
         initialYPosition = transform.position.y;
-        isCorrect= false;
     }
 
     public override bool CanHover(IXRHoverInteractable interactable)
@@ -76,13 +71,4 @@ public class XRSocketTagInteractor : XRSocketInteractor
             transform.rotation = Quaternion.Euler(0f, rotationOffset, 0f);
         }
     }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        
-    }
-
-    //public bool get_isCorrect() { 
-    //    
-    //}
 }
