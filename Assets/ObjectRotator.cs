@@ -10,6 +10,16 @@ public class ObjectRotator : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip rotationSound;
 
+    public Camera rotationCamera;
+
+    private void Awake()
+    {
+        if (rotationCamera != null)
+        {
+            rotationCamera.depth = -1; // Ative a câmera quando a rotação começar
+        }
+    }
+
     private void OnEnable()
     {
         ValidateCubeOnAnalyzer.OnCubePlacementChanged += HandleCubePlacementChange;
@@ -35,13 +45,18 @@ public class ObjectRotator : MonoBehaviour
         if (correctPlacements == numberOfCubesToCheck)
         {
             StartCoroutine(RotateOverTime());
-            PlayRotationSound();
         }
      
     }
 
     IEnumerator RotateOverTime()
     {
+        if (rotationCamera != null)
+        {
+            rotationCamera.depth = 100; // Ative a câmera quando a rotação começar
+            yield return new WaitForSeconds(0.5f);
+        }
+        PlayRotationSound();
         float elapsedRotationTime = 0f;
         Quaternion startRotation = transform.rotation;
         Quaternion targetRotation = transform.rotation * Quaternion.Euler(0f, 90f, 0f);
@@ -54,6 +69,20 @@ public class ObjectRotator : MonoBehaviour
         }
 
         transform.rotation = targetRotation;
+
+        if (rotationCamera != null)
+        {
+            yield return new WaitForSeconds(1.0f);
+            rotationCamera.depth = -1; // Ative a câmera quando a rotação começar
+        }
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(RotateOverTime());
+        }
     }
 
     private void PlayRotationSound()
