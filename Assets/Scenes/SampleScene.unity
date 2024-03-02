@@ -1223,6 +1223,21 @@ PrefabInstance:
       propertyPath: m_ToggleButton
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 962436132}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountPressed
+      objectReference: {fileID: 0}
     - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1291,7 +1306,7 @@ PrefabInstance:
     - target: {fileID: 3399821747579187769, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_Name
-      value: PushButton (5)
+      value: PushButton (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3304,21 +3319,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 521362062}
     m_Modifications:
-    - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5770373
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8390013
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5770373
-      objectReference: {fileID: 0}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 962436132}
     - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3372,7 +3377,7 @@ PrefabInstance:
     - target: {fileID: 3399821747579187769, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_Name
-      value: PushButton (4)
+      value: PushButton (5)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5865,15 +5870,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 450284, guid: 6ffa7d55296318341acf5521f4bbae00,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1781345420}
+    - targetCorrespondingSourceObject: {fileID: 450284, guid: 6ffa7d55296318341acf5521f4bbae00,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1697353889}
     - targetCorrespondingSourceObject: {fileID: 450284, guid: 6ffa7d55296318341acf5521f4bbae00,
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 2112229926}
-    - targetCorrespondingSourceObject: {fileID: 450284, guid: 6ffa7d55296318341acf5521f4bbae00,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1781345420}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ffa7d55296318341acf5521f4bbae00, type: 3}
 --- !u!1001 &568072860
@@ -8167,6 +8172,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 521362062}
     m_Modifications:
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 962436132}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountPressed
+      objectReference: {fileID: 0}
     - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -9055,29 +9075,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
-      propertyPath: m_Pressed
+      propertyPath: m_OnRelease.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
-      propertyPath: m_ToggleButton
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 962436132}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.5770373
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.8390013
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.5770373
-      objectReference: {fileID: 0}
+      propertyPath: m_OnRelease.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 962436130}
     - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9465,12 +9475,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PushButtons:
-  - {fileID: 1199655335}
-  - {fileID: 1257663709}
-  - {fileID: 1438869456}
-  - {fileID: 1697353888}
   - {fileID: 2112229925}
   - {fileID: 1781345419}
+  - {fileID: 1257663709}
+  - {fileID: 1199655335}
+  - {fileID: 1438869456}
+  - {fileID: 1697353888}
+  PressedNumbers: 020000000500000006000000030000000100000004000000
   novaAltura: -0.035
 --- !u!4 &967785896 stripped
 Transform:
@@ -22973,6 +22984,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 521362062}
     m_Modifications:
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 962436132}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountPressed
+      objectReference: {fileID: 0}
     - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -23816,6 +23842,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 521362062}
     m_Modifications:
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnRelease.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 962436132}
+    - target: {fileID: 2304902795837412248, guid: da3b468b35b58334693dfcd04f6e06a7,
+        type: 3}
+      propertyPath: m_OnPress.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CountPressed
+      objectReference: {fileID: 0}
     - target: {fileID: 3130556819844574636, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -23884,7 +23925,7 @@ PrefabInstance:
     - target: {fileID: 3399821747579187769, guid: da3b468b35b58334693dfcd04f6e06a7,
         type: 3}
       propertyPath: m_Name
-      value: PushButton (3)
+      value: PushButton (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

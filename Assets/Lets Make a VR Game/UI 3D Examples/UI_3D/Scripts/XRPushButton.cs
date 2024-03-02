@@ -56,7 +56,7 @@ namespace UnityEngine.XR.Content.Interaction
         [Tooltip("Events to trigger when the button pressed value is updated. Only called when the button is pressed")]
         ValueChangeEvent m_OnValueChange;
 
-        bool m_Pressed = false;
+        public bool m_Pressed = false;
         bool m_Toggled = false;
         float m_Value = 0f;
         Vector3 m_BaseButtonPosition = Vector3.zero;
