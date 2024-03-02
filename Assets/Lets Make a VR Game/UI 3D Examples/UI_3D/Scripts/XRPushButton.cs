@@ -258,7 +258,7 @@ namespace UnityEngine.XR.Content.Interaction
             SetButtonHeight(minimumHeight);
         }
 
-        void SetButtonHeight(float height)
+        public void SetButtonHeight(float height)
         {
             if (m_Button == null)
                 return;
