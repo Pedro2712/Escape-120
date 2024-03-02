@@ -17,6 +17,9 @@ public class XRSocketTagInteractor : XRSocketInteractor
 
     private float initialYPosition;
 
+    public AudioSource audioSource;
+    public AudioClip putSound;
+
     void Start()
     {
         // Salva a posição inicial do objeto
@@ -40,6 +43,7 @@ public class XRSocketTagInteractor : XRSocketInteractor
         // Verifica se o objeto selecionado possui a tag desejada
         if (args.interactableObject.transform.tag == targetTag)
         {
+            PlayRotationSound();
             isObjectSelected = true;
         }
     }
@@ -69,6 +73,14 @@ public class XRSocketTagInteractor : XRSocketInteractor
             // Aplica o movimento ao objeto
             transform.position = new Vector3(transform.position.x, newYPosition, transform.position.z);
             transform.rotation = Quaternion.Euler(0f, rotationOffset, 0f);
+        }
+    }
+
+    private void PlayRotationSound()
+    {
+        if (audioSource != null && putSound != null)
+        {
+            audioSource.PlayOneShot(putSound);
         }
     }
 }
