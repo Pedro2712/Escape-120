@@ -6,9 +6,11 @@ using UnityEngine.XR.Content.Interaction;
 public class PasswordJoystick : MonoBehaviour
 {
     public XRJoystick joystick;
+    public Animator animator;
 
     private List<string> movements = new List<string>();
     private bool isJoystickInExtremePosition = false;
+    public List<string> Password = new List<string>();
 
     // Update is called once per frame
     void Update()
@@ -26,7 +28,7 @@ public class PasswordJoystick : MonoBehaviour
             movements.Add(movementDirection);
 
             // Exibe a lista no console (apenas para fins de teste)
-            //Debug.Log("Movements: " + string.Join(", ", movements));
+            Debug.Log("Movements: " + string.Join(", ", movements));
         }
 
         // Atualiza o estado do joystick
@@ -47,7 +49,34 @@ public class PasswordJoystick : MonoBehaviour
         }
     }
 
-    public void Validated() {
-        print("Entrou");
+    public void Validated()
+    {
+        if (AreListsEqual(movements, Password))
+        {
+            animator.SetBool("Open", true);
+        }
+        else
+        {
+            animator.SetBool("Open", false);
+        }
+
+        // Zera a lista movements
+        movements.Clear();
+    }
+
+    private bool AreListsEqual(List<string> list1, List<string> list2)
+    {
+        // Verifica se as listas têm o mesmo tamanho
+        if (list1.Count != list2.Count)
+            return false;
+
+        // Verifica se os elementos nas posições correspondentes são iguais
+        for (int i = 0; i < list1.Count; i++)
+        {
+            if (list1[i] != list2[i])
+                return false;
+        }
+
+        return true;
     }
 }
