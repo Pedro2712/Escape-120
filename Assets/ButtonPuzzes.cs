@@ -30,13 +30,14 @@ public class ButtonPuzzles : MonoBehaviour
     {
         if (PushButtons.Contains(callingButton))
         {
+            AudioManager.instance.Play("Button");
             int buttonIndex = PushButtons.IndexOf(callingButton);
 
             if (AreAllElementsTrueUntilIndex(buttonIndex))
             {
                 countIntern[buttonIndex]++;
                 ValideNumbers(buttonIndex);
-                HoldButton();
+                //HoldButton();
             }
             else
             {
@@ -51,7 +52,7 @@ public class ButtonPuzzles : MonoBehaviour
         if (countIntern[index] == PressedNumbers[index])
         {
             IsCorrectButton[index] = true;
-            HoldButton();
+            //HoldButton();
         }
         else if (countIntern[index] > PressedNumbers[index]) {
             IncorrectPassword();

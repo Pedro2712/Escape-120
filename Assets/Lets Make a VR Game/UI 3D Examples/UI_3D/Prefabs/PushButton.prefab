@@ -543,6 +543,7 @@ MonoBehaviour:
   m_OnValueChange:
     m_PersistentCalls:
       m_Calls: []
+  m_Pressed: 0
 --- !u!1 &4539088451305259770
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +708,7 @@ MonoBehaviour:
       - stateName: activated
         stateEntered: {fileID: 0}
         stateExited: {fileID: 0}
-    m_Variable: {fileID: 11400000, guid: 64ad62f44531ed64b8409f9af3e74b8e, type: 2}
+    m_Variable: {fileID: 11400000, guid: 2395d6ec75685e042ac9393f5b3e556b, type: 2}
   m_AudioSource: {fileID: 5978349121402991471}
 --- !u!1 &5448982282374398281
 GameObject:

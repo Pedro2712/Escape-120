@@ -26,6 +26,7 @@ public class PasswordLever : MonoBehaviour
     // Método para verificar se a lista de alavancas é igual à lista de booleanos
     public void CheckPassword()
     {
+        AudioManager.instance.Play("Lever");
         // Verifica se o tamanho das listas é o mesmo
         if (lever.Count == booleanList.Count)
         {
@@ -48,6 +49,7 @@ public class PasswordLever : MonoBehaviour
             if (passwordsMatch)
             {
                 animator.SetBool("Open", true);
+                AudioManager.instance.Play("Door");
             }
             else
             {

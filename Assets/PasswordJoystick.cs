@@ -37,6 +37,7 @@ public class PasswordJoystick : MonoBehaviour
 
     private string GetMovementDirection(float horizontal, float vertical)
     {
+        AudioManager.instance.Play("JoyStick");
         if (Mathf.Abs(horizontal) > Mathf.Abs(vertical))
         {
             // Movimento horizontal mais significativo
@@ -54,6 +55,7 @@ public class PasswordJoystick : MonoBehaviour
         if (AreListsEqual(movements, Password))
         {
             animator.SetBool("Open", true);
+            AudioManager.instance.Play("Door");
         }
         else
         {
