@@ -8655,7 +8655,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
-  targetTag: Cube
+  targetTag: start
   moveSpeed: 0.5
   moveDistance: 0.2
   floatSpeed: 0.5
@@ -19428,7 +19428,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
-  targetTag: Cube
+  targetTag: Star
   moveSpeed: 0.5
   moveDistance: 0.2
   floatSpeed: 0.5
