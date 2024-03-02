@@ -23,7 +23,7 @@ public class ButtonPuzzles : MonoBehaviour
 
     void Update()
     {
-        HoldButton();
+        //HoldButton();
     }
 
     public void CountPressed(XRPushButton callingButton)
