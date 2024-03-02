@@ -34,14 +34,12 @@ public class ButtonPuzzles : MonoBehaviour
 
             if (AreAllElementsTrueUntilIndex(buttonIndex))
             {
-                print("Está na ordem correta");
                 countIntern[buttonIndex]++;
                 ValideNumbers(buttonIndex);
                 HoldButton();
             }
             else
             {
-                print("Está na ordem INCORRETA");
                 IncorrectPassword();
             }
         }
@@ -49,7 +47,7 @@ public class ButtonPuzzles : MonoBehaviour
 
     private void ValideNumbers(int index)
     {
-        print(countIntern[index]);
+
         if (countIntern[index] == PressedNumbers[index])
         {
             IsCorrectButton[index] = true;
