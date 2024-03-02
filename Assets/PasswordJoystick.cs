@@ -28,7 +28,7 @@ public class PasswordJoystick : MonoBehaviour
             movements.Add(movementDirection);
 
             // Exibe a lista no console (apenas para fins de teste)
-            Debug.Log("Movements: " + string.Join(", ", movements));
+            //Debug.Log("Movements: " + string.Join(", ", movements));
         }
 
         // Atualiza o estado do joystick
