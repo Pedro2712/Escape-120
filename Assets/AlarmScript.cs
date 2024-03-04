@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AlarmScript : MonoBehaviour
 {
+    private int correctPlacements = 0;
+    public int numberOfSpheresToCheck = 2;
     private List<Light> alarmLights = new List<Light>();
     public float blinkInterval = 0.5f;
     private bool isAlarmActive = false;
@@ -19,14 +21,35 @@ public class AlarmScript : MonoBehaviour
         }
     }
 
-    void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        ValidateStar.OnSpherePlacementChanged += StartAlarm;
+    }
+
+    private void OnDisable()
+    {
+        ValidateStar.OnSpherePlacementChanged -= StartAlarm;
+    }
+
+    private void StartAlarm(bool placedCorrectly)
+    {
+        if (placedCorrectly)
         {
-            isAlarmActive = !isAlarmActive;
-            StartCoroutine(AudioStart());
-            StartCoroutine(BlinkLights());
+            correctPlacements++;
         }
+        else
+        {
+            correctPlacements--;
+            correctPlacements = Mathf.Max(0, correctPlacements);
+        }
+
+        if (correctPlacements == numberOfSpheresToCheck)
+        {
+            isAlarmActive = true;
+        }
+
+        StartCoroutine(AudioStart());
+        StartCoroutine(BlinkLights());
     }
 
     IEnumerator AudioStart() {
