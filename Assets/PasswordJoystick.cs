@@ -56,10 +56,12 @@ public class PasswordJoystick : MonoBehaviour
         {
             animator.SetBool("Open", true);
             AudioManager.instance.Play("Door");
+            AudioManager.instance.Play("Welcome");
         }
         else
         {
             animator.SetBool("Open", false);
+            AudioManager.instance.Play("IncorrectPassword");
         }
 
         // Zera a lista movements

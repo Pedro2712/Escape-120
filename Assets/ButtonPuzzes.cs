@@ -8,9 +8,11 @@ public class ButtonPuzzles : MonoBehaviour
 {
     public List<XRPushButton> PushButtons = new List<XRPushButton>();
     public List<int> PressedNumbers = new List<int>();
-    private List<bool> IsCorrectButton = new List<bool>(new bool[6]);
+    public List<bool> IsCorrectButton = new List<bool>(new bool[6]);
     private List<int> countIntern = new List<int>(new int[6]);
     public float novaAltura = -0.035f;
+
+    public GameObject sphere;
 
     private void Start()
     {
@@ -19,11 +21,13 @@ public class ButtonPuzzles : MonoBehaviour
         {
             Debug.LogWarning("As listas estão com tamanhos diferentes.");
         }
+
+        sphere.SetActive(false);
     }
 
     void Update()
     {
-        //HoldButton();
+        HoldButton();
     }
 
     public void CountPressed(XRPushButton callingButton)
@@ -37,7 +41,6 @@ public class ButtonPuzzles : MonoBehaviour
             {
                 countIntern[buttonIndex]++;
                 ValideNumbers(buttonIndex);
-                //HoldButton();
             }
             else
             {
@@ -46,13 +49,22 @@ public class ButtonPuzzles : MonoBehaviour
         }
     }
 
+    private void puzzlePrize()
+    {
+        AudioManager.instance.Play("sphere");
+        sphere.SetActive(true);
+    }
+
     private void ValideNumbers(int index)
     {
 
         if (countIntern[index] == PressedNumbers[index])
         {
             IsCorrectButton[index] = true;
-            //HoldButton();
+
+            if (index == 5) { 
+                puzzlePrize();
+            }
         }
         else if (countIntern[index] > PressedNumbers[index]) {
             IncorrectPassword();
@@ -78,6 +90,7 @@ public class ButtonPuzzles : MonoBehaviour
             IsCorrectButton[i] = false;
             countIntern[i] = 0;
         }
+        AudioManager.instance.Play("WrongBuzzer");
     }
 
     private bool AreAllElementsTrueUntilIndex(int endIndex)
