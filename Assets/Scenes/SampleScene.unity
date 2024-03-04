@@ -194,6 +194,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 358430694}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &10187453
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 10187455}
+  - component: {fileID: 10187454}
+  m_Layer: 0
+  m_Name: teste
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &10187454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10187453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011ba7eb4fcbb4a4caaadc999e0aa3c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinkInterval: 0.5
+--- !u!4 &10187455
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10187453}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.6751628, y: 1.9671606, z: -8.597822}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &16985690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 120586, guid: e15828603e27c5e42b39860e4f55da70,
@@ -2716,7 +2761,7 @@ PrefabInstance:
     - target: {fileID: 8671216258666988538, guid: e14d47d6d769d744db11e27a6eea9903,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.0868
+      value: -0.022800008
       objectReference: {fileID: 0}
     - target: {fileID: 8671216258666988538, guid: e14d47d6d769d744db11e27a6eea9903,
         type: 3}
@@ -7513,7 +7558,7 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     source: {fileID: 355525956}
-  - name: 'background music '
+  - name: backgroundmusic
     clip: {fileID: 8300000, guid: a11f4d409bec78348a126a4e9083cd7d, type: 3}
     volume: 0.1
     pitch: 1
@@ -7564,6 +7609,27 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: sphere
     clip: {fileID: 8300000, guid: 814a262fc4b7c5b4396bdd03101affa0, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Alarm
+    clip: {fileID: 8300000, guid: 16ef70102fb5ab644adb1e55123a9b6f, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Destruction
+    clip: {fileID: 8300000, guid: f450889317c4b2e478801f9077b4e64c, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: minuteDestruction
+    clip: {fileID: 8300000, guid: e4ef85d00949f6c44b22e679a2672435, type: 3}
     volume: 0.5
     pitch: 1
     loop: 0
@@ -23896,7 +23962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 424708, guid: cd918f355f278d740a893b9a8b49a85c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.085
+      value: -0.021
       objectReference: {fileID: 0}
     - target: {fileID: 424708, guid: cd918f355f278d740a893b9a8b49a85c, type: 3}
       propertyPath: m_LocalPosition.y
@@ -27170,3 +27236,4 @@ SceneRoots:
   - {fileID: 381689430}
   - {fileID: 6163383350861154049}
   - {fileID: 622837307}
+  - {fileID: 10187455}
