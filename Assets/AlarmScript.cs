@@ -9,6 +9,7 @@ public class AlarmScript : MonoBehaviour
     private List<Light> alarmLights = new List<Light>();
     public float blinkInterval = 0.5f;
     private bool isAlarmActive = false;
+    public Animator animator;
 
     void Start()
     {
@@ -46,6 +47,8 @@ public class AlarmScript : MonoBehaviour
         if (correctPlacements == numberOfSpheresToCheck)
         {
             isAlarmActive = true;
+            animator.SetBool("Open", true);
+
         }
 
         StartCoroutine(AudioStart());

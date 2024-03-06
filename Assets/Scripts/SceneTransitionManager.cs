@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
+    public UnityEvent onLongPress;
     public static SceneTransitionManager singleton;
 
     private void Awake()
@@ -50,5 +52,10 @@ public class SceneTransitionManager : MonoBehaviour
         }
 
         operation.allowSceneActivation = true;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        onLongPress.Invoke();
     }
 }
